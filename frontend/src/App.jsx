@@ -1,9 +1,9 @@
+import Register  from './Register';
 function App() {
   return (
     <>
-      <div>hello</div>
+    <Register/>
     </>
   )
 }
-
 export default App
