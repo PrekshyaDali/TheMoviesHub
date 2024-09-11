@@ -1,9 +1,8 @@
 function App() {
   return (
     <>
-      <div>hello</div>
+      <div className="text-green-500">hello</div>
     </>
   )
 }
-
 export default App
