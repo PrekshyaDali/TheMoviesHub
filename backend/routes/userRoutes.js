@@ -4,7 +4,9 @@ const {
     loginUser,
     logoutCurrentUser,
     createUsers,
-    getAllUsers
+    getAllUsers,
+    getCurrentUserProfile,
+    updateCurrentUserProfile
 } = require ('../controllers/userController.js')
 const {authenticate, authorizeAdmin}  = require('../middlewares/authMiddleware');
 
@@ -18,5 +20,5 @@ router
   .get(authenticate, authorizeAdmin, getAllUsers);
 router.post('/auth', loginUser)
 router.post('/logout', logoutCurrentUser)
-
+router.route('/profile').get(authenticate, getCurrentUserProfile).put(authenticate, updateCurrentUserProfile);
 module.exports = router;
