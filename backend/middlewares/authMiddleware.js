@@ -42,4 +42,3 @@ const middewares = {
     authorizeAdmin
 }
 module.exports  = middewares;
-

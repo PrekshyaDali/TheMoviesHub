@@ -139,7 +139,6 @@ const updateCurrentUserProfile = asyncHandler(async (req, res) => {
     }
 })
 
-
 module.exports = {
     createUsers,
     loginUser,
