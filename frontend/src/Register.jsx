@@ -3,7 +3,7 @@ import React from 'react'
 export default function Register() {
     return (
         <>
-            <div className='p-5 sm:p-10 flex justify-center'>
+            <form className='p-5 sm:p-10 flex justify-center'>
                 <div className='flex flex-col space-y-5 p-5 sm:p-10 border-2'>
                     <h1 className='text-2xl font-bold'>Register</h1>
                     <div>
@@ -34,7 +34,7 @@ export default function Register() {
                         </p>
                     </div>
                 </div>
-            </div>
+            </form>
         </>
     )
 }

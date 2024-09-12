@@ -14,8 +14,9 @@ const authenticate = asyncHandler(async (req, res, next) => {
         try {
             const decoded = jwt.verify(token, process.env.JWT_SECRET)
             req.user = await User.findById(decoded.userId).select('-password');
+            //next is used to pass control to the next middleware in Express
             next();
-
+            //meaning if admin proceed to the next middleware
         } catch (error) {
             res.status(401).json({error: "not authorized , token failed"})
         }
@@ -26,7 +27,7 @@ const authenticate = asyncHandler(async (req, res, next) => {
 })
 
 //check if the user is admin or not
-const authorizeAdmin = async(req, res)=>{
+const authorizeAdmin = async(req, res, next)=>{
     if(req.user && req.user.isAdmin ){
         next()
     }
