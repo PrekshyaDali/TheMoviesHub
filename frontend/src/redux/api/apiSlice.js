@@ -5,6 +5,7 @@ import {BASE_URL} from "../constants"
 //another alternative will be making all the endpoints herea s well 
 const baseQuery = fetchBaseQuery({baseUrl: BASE_URL});
 export const apiSlice = createApi({
+    reducerPath: 'api',
     baseQuery,
-    endpoints:()=>({}),
-})
+    endpoints: () => ({}),
+});
