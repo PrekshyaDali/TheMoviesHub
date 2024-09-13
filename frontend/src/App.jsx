@@ -1,8 +1,11 @@
-import Register  from './Register';
+import Register from "./pages/Auth/Register"
+import { Outlet } from "react-router"
 function App() {
   return (
     <>
-    <Register/>
+       <main className="py-3">
+        <Outlet />
+      </main>
     </>
   )
 }
