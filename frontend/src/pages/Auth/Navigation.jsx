@@ -9,9 +9,7 @@ import { MdOutlineLocalMovies } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch, Provider } from 'react-redux'
-import {useLoginMutation, useLogoutMutation} from  '../../redux/api/user'
-
-import { logout } from '../../redux/features/auth/authSlice'
+// import {useLoginMutation,useLogoutMutation} from  '../../redux/api/user'
 import Register from './Register'
 
 export default function Navigation() {
@@ -23,12 +21,11 @@ export default function Navigation() {
     }
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const [logoutApiCall] = useLogoutMutation();
-    const [login] = useLoginMutation();
+    // const [logout] = useLogoutMutation();
 
     const logoutHandler = async () => {
         try {
-            const res = await logoutApiCall().unwrap();
+            // const res = await logout().unwrap();
             console.log(res);
             dispatch(logout());
             navigate("/register")
@@ -160,4 +157,3 @@ export default function Navigation() {
         </div>
     )
 }
-
