@@ -120,24 +120,15 @@ export default function Navigation() {
                         </ul>
                     )}
                 </div>
-                <div className="flex justify-center items-center mb-[2rem]">
-                    <Link
-                        to="/logout"
-                        className="flex items-center transition-transform transform hover:translate-x-2"
-                    >
-                        <AiOutlineLogin className="mr-2 mt-[3rem] " size={26} color='white' />
-                        <span className="hidden nav-item-name mt-[3rem]">Home</span>
-                    </Link>
-                </div>
 
                 {!userInfo && (
-                    <ul className="flex">
+                    <ul className="flex items-center">
                         <li>
                             <Link
                                 to="/login"
                                 className="flex items-center mt-5 transition-transform transform hover:translate-x-2 mb-[2rem]"
                             >
-                                <AiOutlineLogin className="mr-2 mt-[4px]" size={26} />
+                                <AiOutlineLogin className=" mr-2 mt-[4px]" color='white' size={26} />
                                 <span className="hidden nav-item-name">LOGIN</span>
                             </Link>
                         </li>
@@ -147,7 +138,7 @@ export default function Navigation() {
                                 to="/register"
                                 className="flex items-center mt-5 transition-transform transform hover:translate-x-2 ml-[1rem]"
                             >
-                                <AiOutlineUserAdd size={26} />
+                                <AiOutlineUserAdd color='white' size={26} />
                                 <span className="hidden nav-item-name">REGISTER</span>
                             </Link>
                         </li>
