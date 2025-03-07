@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
+
+.inputfields {
+    @apply px-3 text-sm w-full lg:w-full border-2 border-gray-200 h-10 rounded-sm hover:shadow-xl focus-visible:outline-none
+}
+
 @tailwind utilities;
